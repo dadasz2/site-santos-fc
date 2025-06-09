@@ -1,0 +1,337 @@
+@import url(https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap);
+
+:root {
+    --main-color: #000000;
+    --cinza: #323232;
+    --cinza_claro: #4a4a4a;
+    --cinza_claro2: #636363;
+    --amarelo: #FFD700;
+    font-size: 10px;
+}
+  
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    transition: 0.2s linear;
+}
+  
+/* Layout geral */
+html, body {
+    height: 100%;
+    font-family: 'Oswald', sans-serif;
+    color: #fff;
+}
+  
+/* Header e Navbar */
+.header {
+    background-color: black;
+    width: 100%;
+    z-index: 1000;
+    position: sticky;
+    top: 0;
+}
+  
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    gap: 30px;
+}
+  
+.logo-navbar {
+    height: 70px;
+}
+  
+.instagram-logo {
+    height: 50px;
+}
+  
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+  
+.menu li a {
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+  
+.menu li a:hover {
+    color: var(--amarelo);
+}
+  
+  /* SECTION VIDEO */
+.video-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+  
+.background-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+  
+  /* CONTEUDO ABAIXO VIDEO */
+.content {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 40px 20px;
+    border-radius: 12px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.795);
+}
+  
+.content h3 {
+    font-size: 7rem;
+    color: var(--amarelo);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+  
+  .content p {
+    font-size: 2rem;
+    color: white;
+    line-height: 1.6;
+}
+  
+
+.carrossel-container {
+    padding: 50px 0;
+}
+  
+.carrossel {
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+  
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+  
+.slide {
+    min-width: 100%;
+    position: relative;
+}
+  
+.slide img {
+    width: 100%;
+    display: block;
+    height: 500px;
+    object-fit: cover;
+}
+  
+.slide-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    text-align: center;
+}
+  
+.slide-caption h3 {
+    font-size: 3rem;
+    color: var(--amarelo);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+  
+.slide-caption p {
+    font-size: 1.8rem;
+    color: white;
+}
+  
+.controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+  
+.controls button {
+    background: rgba(0, 0, 0, 0.5);
+    color: var(--amarelo);
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 2.5rem;
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+  
+.controls button:hover {
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+}
+  
+.indicadores {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    gap: 10px;
+}
+  
+.indicador {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background: var(--cinza_claro);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+  
+.indicador.ativo {
+    background: var(--amarelo);
+    transform: scale(1.2);
+}
+
+/* FUNDO HISTORIA */
+.fundacao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+    background-size: cover;
+    background-position: center;
+    background-color: #020202;  
+}
+
+/* ESTILIZAÇÃO TEXTO HISTÓRIA */
+.historia-text{
+    max-width: 800px;
+    background-color: #080808;
+    border: 3.5px solid var(--amarelo);
+    border-radius: 10px;
+    padding: 40px 30px;
+    color: #fff;
+    text-align: center;
+}
+
+.historia-text h2{
+    text-align: center;
+    font-size: 70px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.historia-text p{
+    font-size: 1.6rem;
+    line-height: 1.8;
+    color: #fff;
+}
+
+.img-logo{
+    max-height: 20rem;
+    padding: 20px;
+}
+
+.cards-container{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px 20px;
+    flex-wrap: wrap;
+  }
+
+.titulo-principal{
+    text-align: center;
+    font-size: 60px;
+    color: var(--main-color);
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+/* CARD TITULOS */
+
+.cards-container{
+    background-color: #080808;
+}
+
+.card{
+    background-color: #050505;
+    border: 2px solid #000000;
+    border-radius: 16px;
+    padding: 20px;
+    width: 300px;
+    box-sizing: border-box;
+    text-align: center;
+}
+  
+.card img{
+    max-height: 250px;
+}
+.card h3{
+    font-size: 24px;
+    color: #FFD700;
+    margin-bottom: 10px;
+}
+  
+.card p{
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.p-titulo{
+    font-size: 2rem;
+    color: #fff;
+    text-align: center;
+    background-color: #050505;
+    border-radius: 20px;
+    padding: 50px;
+
+}
+
+.img-logo, .img-taca {
+  max-height: 20rem;
+  padding: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.img-logo:hover {
+  transform: scale(1.05);
+}
+
+.img-taca:hover {
+  transform: scale(1.05);
+}
+
+
+/* Rodapé */
+#rodape {
+    background-color: var(--main-color);
+    color: var(--cinza_claro2);
+    text-align: center;
+    padding: 40px 30px;;
+    font-size: 12px;
+}
+  
+#rodape a {
+    text-decoration: none;
+    color: var(--amarelo);
+}
+  
+#rodape a:hover {
+    text-decoration: underline;
+    color: #fff;
+}
